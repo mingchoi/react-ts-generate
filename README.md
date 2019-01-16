@@ -32,7 +32,7 @@ yarn add --dev react-ts-generate
 }
  ```
  
- ### Start generate template!
+ ### Done!
  ```
  yarn generate
  
@@ -43,5 +43,7 @@ yarn add --dev react-ts-generate
   container (stateful) - class based stateful component 
   redux: state, reducer & actions - state, reducer, constants and action creator
   container (redux) - redux based container 
-
  ```
+ 
+ ## Add your own templates
+ Copy [index.js](https://github.com/mingchoi/react-ts-generate/blob/master/index.js) and [templates](https://github.com/mingchoi/react-ts-generate/tree/master/templates) to {PROJECT_ROOT}/internals/generators and updated the generate script, take a look at index.js to understand how the generator works.
