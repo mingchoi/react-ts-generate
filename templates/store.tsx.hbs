@@ -1,0 +1,12 @@
+import { createStore, combineReducers } from "redux";
+import { {{camelCase name}}Reducer } from "./reducers/{{dashCase name}}";
+import { RootState } from "./types/state";
+import { {{properCase name}}Action } from "./actions/{{dashCase name}}";
+
+const store = createStore<RootState, {{properCase name}}Action, null, null>(
+  combineReducers<RootState>({
+    {{camelCase name}}: {{camelCase name}}Reducer
+  }),
+);
+
+export default store

@@ -1,0 +1,41 @@
+import * as React from "react";
+import "./{{dashCase name}}.css";
+
+export interface Props {
+  name: string;
+}
+
+interface State {
+  count: number;
+}
+
+class {{properCase name}} extends React.Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { count: 0 };
+  }
+
+  onIncrement = () => this.updateCount(this.state.count + 1);
+  onDecrement = () => this.updateCount(this.state.count - 1);
+
+  updateCount(count: number) {
+    this.setState({ count: count });
+  }
+
+  render() {
+    const { name } = this.props;
+    const { count } = this.state;
+
+    return (
+      <div className="{{name}}">
+        <div className="greeting">
+          Hello {name}, here is a counter with state:{count}
+        </div>
+        <button onClick={this.onDecrement}>-</button>
+        <button onClick={this.onIncrement}>+</button>
+      </div>
+    );
+  }
+}
+
+export default {{properCase name}};

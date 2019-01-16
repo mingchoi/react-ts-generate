@@ -1,0 +1,41 @@
+import * as React from "react";
+import { Dispatch } from "redux";
+import { connect } from "react-redux";
+
+import { RootState } from "../../types/state";
+import * as actions from "../../actions/demo-action";
+
+import "./{{dashCase name}}.css";
+
+export interface Props extends RootState {
+  onFirstAction: () => void;
+  onSecondAction: () => void;
+}
+
+class {{properCase name}} extends React.Component<Props> {
+  render() {
+    const props = this.props;
+
+    return (
+      <div className="{{name}}">
+        <button onClick={props.onFirstAction}>First Action</button>
+        <button onClick={props.onSecondAction}>Second Action</button>
+      </div>
+    );
+  }
+}
+
+export function mapStateToProps(state: RootState) {
+  return {
+    ...state
+  }
+}
+
+export function mapDispatchToProps(dispatch: Dispatch<actions.DemoAction>) {
+  return {
+    onFirstAction: () => dispatch(actions.firstAction("First Action")),
+    onSecondAction: () => dispatch(actions.secondAction("Second Action")),
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)({{properCase name}});

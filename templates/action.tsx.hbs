@@ -1,0 +1,27 @@
+import * as constants from "../constants/{{dashCase name}}";
+
+export interface {{properCase actiona}} {
+  type: constants.{{constantCase actiona}};
+  payload: string;
+}
+
+export interface {{properCase actionb}} {
+  type: constants.{{constantCase actionb}};
+  payload: string;
+}
+
+export function {{camelCase actiona}}(name: string): {{properCase actiona}} {
+  return {
+    type: constants.{{constantCase actiona}},
+    payload: name,
+  };
+}
+
+export function {{camelCase actionb}}(name: string): {{properCase actionb}} {
+  return {
+    type: constants.{{constantCase actionb}},
+    payload: name,
+  };
+}
+
+export type {{properCase name}}Action = {{properCase actiona}} | {{properCase actionb}};

@@ -1,0 +1,20 @@
+import * as React from "react";
+import "./{{dashCase name}}.css";
+
+export interface Props {
+  name: string;
+}
+
+function {{properCase name}}(props: Props) {
+  if (props.name.length < 3) {
+    throw new Error("Name too short.");
+  }
+
+  return (
+    <div className="{{name}}">
+      Hello {name}, this is a component template written in function style.
+    </div>
+  );
+}
+
+export default {{properCase name}};

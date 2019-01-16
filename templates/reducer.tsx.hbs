@@ -1,0 +1,17 @@
+import { {{properCase name}}Action } from "../actions/{{dashCase name}}";
+import { {{properCase name}}State } from "../types/state";
+import { {{constantCase actiona}}, {{constantCase actionb}} } from "../constants/{{dashCase name}}";
+
+const initState = {
+  name: ""
+}
+
+export function {{camelCase name}}Reducer(state: {{properCase name}}State = initState, action: {{properCase name}}Action): {{properCase name}}State {
+  switch (action.type) {
+    case {{constantCase actiona}}:
+      return { ...state, name: action.payload };
+    case {{constantCase actionb}}:
+      return { ...state, name: action.payload };
+  }
+  return state;
+}

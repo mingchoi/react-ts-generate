@@ -1,0 +1,27 @@
+{
+  "name": "react-ts-generate",
+  "version": "1.0.0",
+  "description": "Generate templates for react/redux project in typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mingchoi/react-ts-generate.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "generator"
+  ],
+  "author": "Ming Choi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mingchoi/react-ts-generate/issues"
+  },
+  "homepage": "https://github.com/mingchoi/react-ts-generate#readme",
+  "devDependencies": {
+    "plop": "^2.2.0"
+  }
+}
